@@ -1,0 +1,25 @@
+* BACKEND:
+- Rotas:
+	- Cadastrar novo cliente
+	- Autenticar cliente
+	- E-mail/ mensagem para recuperar senha
+	- Get de horarios/datas disponiveis
+	- Confirmação de agendamento
+	
+* MOBILE:
+- página inicial:
+	fundo, titulo e subtitulo e botoes
+- cadastro:
+	cabeçalho, inputs, botao
+- esqueci senha:
+	igual login, so campo email
+- login:
+	cabeçalho, imagem, titulo e subtitulo, input login, input senha, link esqueci senha, botao
+- escolha atendimento:
+	4 caixas "retrateis", com titulos, linha sob titulo, lista, botao qtd, botao add com valor
+- forma pgto:
+	texto, caixa de escolha, botao
+- agende:
+	calendario, seletor com horarios
+- confirme:
+	caixa com titulo e lista de itens, com coluna nome, qtd, preço, botao confirmar
