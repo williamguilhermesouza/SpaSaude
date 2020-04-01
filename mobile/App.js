@@ -1,7 +1,7 @@
-import React, {useState, useEffect } from 'react';
-import Main from './src/pages/Main';
+import React, { useState } from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
+import Routes from './src/routes';
 
 
 
@@ -27,6 +27,6 @@ export default function App() {
     );
   }
   return (
-    <Main />
+    <Routes />
   );
 }
