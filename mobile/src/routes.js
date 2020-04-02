@@ -6,15 +6,14 @@ const AppStack = createStackNavigator();
 
 import Main from './pages/Main';
 import FirstTime from './pages/FirstTime';
+import Login from './pages/Login';
+import Attendance from './pages/Attendance';
 
-function headerOptions() {
+function headerOptions(title) {
     return {
-        title: 'Primeira Vez',
+        title: title,
         headerStyle: {
             backgroundColor: '#FDD4C3',
-        },
-        headerTitleStyle: {
-            paddingLeft: 75,
         },
     };
 }
@@ -24,7 +23,9 @@ export default function Routes() {
         <NavigationContainer>
             <AppStack.Navigator>
                 <AppStack.Screen name="Main" component={Main} options={{ headerShown: false }} />
-                <AppStack.Screen name="FirstTime" component={FirstTime} options={headerOptions}/>
+                <AppStack.Screen name="FirstTime" component={FirstTime} options={headerOptions('Primeira Vez')}/>
+                <AppStack.Screen name="Login" component={Login} options={headerOptions('Login')}/>
+                <AppStack.Screen name="Attendance" component={Attendance} options={headerOptions('Escolha seu Atendimento')}/>
             </AppStack.Navigator>
         </NavigationContainer>
     ); 

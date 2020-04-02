@@ -8,8 +8,8 @@ import styles from './styles';
 export default function FirstTime() {
     const navigation = useNavigation();
 
-    function navigateToMain() {
-        navigation.navigate('Main');
+    function navigateToLogin() {
+        navigation.navigate('Login');
     };
 
     return (
@@ -103,7 +103,7 @@ export default function FirstTime() {
 
         <TouchableOpacity 
             style={styles.avancarButton}
-            onPress={navigateToMain}
+            onPress={navigateToLogin}
         >
             <Text style={styles.avancarText}>Avançar</Text>
         </TouchableOpacity>

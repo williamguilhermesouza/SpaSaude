@@ -12,6 +12,11 @@ export default function Main() {
     function navigateToFirstTime() {
         navigation.navigate('FirstTime');
     };
+
+    function navigateToLogin() {
+        navigation.navigate('Login');
+    };
+
     return (
         <View style={styles.container}>
             <Image source={titleImg} style={styles.image} />
@@ -28,7 +33,7 @@ export default function Main() {
             </TouchableOpacity>
             <TouchableOpacity 
                 style={styles.toLoginButton}
-                onPress={()=>{}}
+                onPress={navigateToLogin}
             >
                 <Text style={styles.toLoginText}>Já sou cliente</Text>
             </TouchableOpacity>
