@@ -13,7 +13,8 @@ export default StyleSheet.create({
     },
 
     nextButton: {
-        marginTop: 30,
+        bottom: 50,
+        marginTop: 70,
         alignSelf: 'center',
         alignItems: 'center',
         width: '60%',

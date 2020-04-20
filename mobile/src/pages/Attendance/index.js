@@ -20,6 +20,8 @@ export default function Attendance() {
 
                 <MassageView title='Tratamento Celulite' price={100}/>
 
+            </ScrollView>
+
                 <TouchableOpacity 
                     style={styles.nextButton}
                     onPress={navigateToSchedule}
@@ -27,7 +29,6 @@ export default function Attendance() {
                     <Text style={styles.nextText}>Avançar</Text>
                 </TouchableOpacity>
 
-            </ScrollView>
         </View>
     );
 };
