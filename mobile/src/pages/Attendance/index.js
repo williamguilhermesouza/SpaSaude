@@ -1,13 +1,17 @@
 import React from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 import MassageView from '../../components/MassageView';
 
 export default function Attendance() {
+    const navigation = useNavigation();
     
 
-    function navigateToSchedule() {};
+    function navigateToSchedule() {
+        navigation.navigate('Schedule');
+    };
 
     return (
         <View style={styles.container}>
