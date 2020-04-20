@@ -17,7 +17,7 @@ export default StyleSheet.create({
         borderRadius: 15,
     },
 
-    massageExpandOpacity: {
+    massageView: {
         alignItems: 'center',
         marginBottom: 45,
         width: '80%',
@@ -26,11 +26,23 @@ export default StyleSheet.create({
         borderRadius: 15,
     },
 
-    massageOpacityTitle: {
+    massageHeader: {
         paddingTop: 10,
+        width: '85%',
+        flexDirection: 'row',
+        alignItems: 'stretch',
+    },
+
+    massageHeaderTitle: {
+        marginLeft: '15%',
+        marginRight: '10%',
         fontSize: 20,
         fontStyle: 'italic',
         fontFamily: 'ABeeZee',
+    },
+
+    expandCollapseButton: {
+        marginTop: 5,
     },
 
     massageList: {
