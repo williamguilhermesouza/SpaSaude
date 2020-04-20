@@ -4,9 +4,9 @@ import { AntDesign } from '@expo/vector-icons';
 
 import styles from './styles';
 
-export default function MassageView() {
-    let [ expanded, setExpanded ] = useState(true);
-    let [ animation ] = useState(new Animated.Value(300));
+export default function MassageView(props) {
+    let [ expanded, setExpanded ] = useState(false);
+    let [ animation ] = useState(new Animated.Value(50));
 
 
     function toggle() {
@@ -28,7 +28,7 @@ export default function MassageView() {
             <Animated.View style={{ ...styles.massageView, height: animation }}>
 
                 <View style={styles.massageHeader}>
-                    <Text style={styles.massageHeaderTitle}>Massagem Completa</Text>
+                    <Text style={styles.massageHeaderTitle}>{props.title}</Text>
                     <TouchableOpacity
                         style={styles.expandCollapseButton}
                         onPress={toggle}
@@ -62,7 +62,7 @@ export default function MassageView() {
                         </TouchableOpacity>
 
                         <TouchableOpacity style={styles.addButton}>
-                            <Text style={styles.addButtonText}> Adicionar R$ 150,00 </Text>
+                            <Text style={styles.addButtonText}> Adicionar R$ {props.price},00 </Text>
                         </TouchableOpacity>
                     </View> 
                 }

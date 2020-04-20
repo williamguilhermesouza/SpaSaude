@@ -12,6 +12,7 @@ export default StyleSheet.create({
     },
 
     massageView: {
+        alignSelf: 'center',
         alignItems: 'center',
         marginBottom: 45,
         width: '80%',
@@ -81,5 +82,5 @@ export default StyleSheet.create({
         fontSize: 18,
         paddingBottom: 5,
     },
-    
+
 });

@@ -2,18 +2,25 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     container: {
-        marginTop: 50,
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
     },
 
+    scrollContainer: {
+        paddingTop: 50,
+        width: '100%',
+    },
+
     nextButton: {
+        marginTop: 30,
+        alignSelf: 'center',
         alignItems: 'center',
         width: '60%',
-        height: '9%',
+        height: 50,
         backgroundColor: '#F4AA8A',
         borderRadius: 10,
+
     },
 
     nextText: {

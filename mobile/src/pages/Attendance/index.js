@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 import styles from './styles';
 import MassageView from '../../components/MassageView';
@@ -11,15 +11,23 @@ export default function Attendance() {
 
     return (
         <View style={styles.container}>
-            <MassageView />
+            <ScrollView style={styles.scrollContainer}>
+                <MassageView title='Massagem Completa' price={150}/>
 
-            <TouchableOpacity 
-                style={styles.nextButton}
-                onPress={navigateToSchedule}
-            >
-                <Text style={styles.nextText}>Avançar</Text>
-            </TouchableOpacity>
+                <MassageView title='Massagem Pedras' price={100}/>
 
+                <MassageView title='Massagem Relaxante' price={120}/>
+
+                <MassageView title='Tratamento Celulite' price={100}/>
+
+                <TouchableOpacity 
+                    style={styles.nextButton}
+                    onPress={navigateToSchedule}
+                >
+                    <Text style={styles.nextText}>Avançar</Text>
+                </TouchableOpacity>
+
+            </ScrollView>
         </View>
     );
 };
