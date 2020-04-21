@@ -67,11 +67,11 @@ export default function Schedule() {
             </View>
 
             <TouchableOpacity 
-                    style={styles.nextButton}
-                    onPress={navigateToConfirmation}
-                >
-                    <Text style={styles.nextText}>Avançar</Text>
-                </TouchableOpacity>
+                style={styles.nextButton}
+                onPress={navigateToConfirmation}
+            >
+                <Text style={styles.nextText}>Avançar</Text>
+            </TouchableOpacity>
         </View>
     );
 };

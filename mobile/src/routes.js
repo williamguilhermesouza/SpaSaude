@@ -9,6 +9,7 @@ import FirstTime from './pages/FirstTime';
 import Login from './pages/Login';
 import Attendance from './pages/Attendance';
 import Schedule from './pages/Schedule';
+import Confirmation from './pages/Confirmation';
 
 function headerOptions(title) {
     return {
@@ -28,6 +29,7 @@ export default function Routes() {
                 <AppStack.Screen name="Login" component={Login} options={headerOptions('Login')}/>
                 <AppStack.Screen name="Attendance" component={Attendance} options={headerOptions('Escolha seu Atendimento')}/>
                 <AppStack.Screen name="Schedule" component={Schedule} options={headerOptions('Agende seu Horário')}/>
+                <AppStack.Screen name="Confirmation" component={Confirmation} options={headerOptions('Confirme seu Agendamento')}/>
             </AppStack.Navigator>
         </NavigationContainer>
     ); 
