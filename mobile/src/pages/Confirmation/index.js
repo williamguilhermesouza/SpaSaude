@@ -1,10 +1,15 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
 export default function Confirmation() {
-    function navigateToThanks() {};
+    const navigation = useNavigation();
+
+    function navigateToThanks() {
+        navigation.navigate('Thanks');
+    };
     return (
         <View style={styles.container}>
             <View style={styles.confirmationBox}>
