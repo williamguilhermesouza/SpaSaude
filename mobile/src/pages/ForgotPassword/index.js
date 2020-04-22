@@ -7,14 +7,11 @@ import styles from './styles';
 import titleImg from '../../assets/main.jpg';
 
 // fix keyboard gets in front of input
-export default function Login() {
+export default function ForgotPassword() {
     const navigation = useNavigation();
 
-    function navigateTofPass() {
-        navigation.navigate('ForgotPassword');
-    };
-    function navigateToAttendance() {
-        navigation.navigate('Attendance');
+    function navigateToLogin() {
+        navigation.navigate('Login');
     };
 
     return (
@@ -24,31 +21,19 @@ export default function Login() {
                 <Text style={styles.title}>Spa&amp;Saude</Text>
                 <Text style={styles.subtitle}>Terapia Antiestresse</Text>
             </View>
-            <TextInput 
-                style={styles.input}
-                placeholder="Login" 
-                placeholderTextColor='#777'
-                onChangeText={() => {}} 
-            />
+
             <TextInput 
                 style={{ ...styles.input, marginTop: 20 }}
-                placeholder="Senha" 
+                placeholder="E-mail" 
                 placeholderTextColor='#777'
                 onChangeText={() => {}} 
             />
 
             <TouchableOpacity 
-                style={styles.fPassLink}
-                onPress={navigateTofPass}
+                style={styles.sendButton}
+                onPress={navigateToLogin}
             >
-                <Text style={styles.fPassText}>Esqueceu a senha?</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity 
-                style={styles.entryButton}
-                onPress={navigateToAttendance}
-            >
-                <Text style={styles.entryText}>Entrar</Text>
+                <Text style={styles.sendText}>Enviar</Text>
             </TouchableOpacity>
         </View>
     );
