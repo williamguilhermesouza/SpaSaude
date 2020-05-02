@@ -2,7 +2,9 @@
 
 # Spa&Saude Mobile Care App
 
-<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/demo.gif" width="300" height="550" />
+<p align="center">
+    <img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/demo.gif" width="300" height="550" />
+</p>
 
 ## Objective
 
@@ -11,17 +13,17 @@ where a client can schedule some treatments like massages and care like services
 
 As the development of the product advanced, and according to the client actually the application has the screens:
 
-![telaabertura](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/1.png)
-![cadastro](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/2.png)
-![login](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/3.png)
-![esqueci](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/4.png)
-![atendimento](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/5.png)
-![atendimento2](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/6.png)
-![agendar](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/7.png)
-![agendar2](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/8.png)
-![agendar3](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/9.png)
-![confirme](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/10.png)
-![obrigado](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/11.png)
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/1.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/2.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/3.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/4.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/5.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/6.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/7.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/8.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/9.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/10.png" width="300" height="550" />
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/11.png" width="300" height="550" />
 
 
 
