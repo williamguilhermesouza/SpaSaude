@@ -2,7 +2,7 @@
 
 # Spa&Saude Mobile Care App
 
-![demostration](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/demo.gif)
+![demostration| 50%](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/demo.gif)
 
 ## Objective
 
