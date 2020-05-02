@@ -2,7 +2,7 @@
 
 # Spa&Saude Mobile Care App
 
-![demostration](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/demo.gif)
+<img src="https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/demo.gif" width="300" height="550" />
 
 ## Objective
 
@@ -11,7 +11,7 @@ where a client can schedule some treatments like massages and care like services
 
 As the development of the product advanced, and according to the client actually the application has the screens:
 
-![telaabertura](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/1.png =100x200)
+![telaabertura](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/1.png)
 ![cadastro](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/2.png)
 ![login](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/3.png)
 ![esqueci](https://raw.githubusercontent.com/williamguilhermesouza/SpaSaude/master/demos/4.png)
