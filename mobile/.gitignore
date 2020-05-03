@@ -10,5 +10,8 @@ npm-debug.*
 web-build/
 web-report/
 
+# firebase API configurations
+firebase.config.js
+
 # macOS
 .DS_Store
