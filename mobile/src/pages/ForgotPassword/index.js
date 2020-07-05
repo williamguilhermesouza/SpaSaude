@@ -34,6 +34,9 @@ export default function ForgotPassword() {
                 style={{ ...styles.input, marginTop: 20 }}
                 placeholder="E-mail" 
                 placeholderTextColor='#777'
+                autoCompleteType="email"
+                textContentType="emailAddress"
+                keyboardType="email-address"
                 onChangeText={text => setEmail(text)} 
             />
 

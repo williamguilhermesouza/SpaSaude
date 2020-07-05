@@ -37,12 +37,17 @@ export default function Login() {
                 style={styles.input}
                 placeholder="E-mail" 
                 placeholderTextColor='#777'
+                autoCompleteType="email"
+                textContentType="emailAddress"
+                keyboardType="email-address"
                 onChangeText={text => setEmail(text)} 
             />
             <TextInput 
                 style={{ ...styles.input, marginTop: 20 }}
                 placeholder="Senha" 
                 placeholderTextColor='#777'
+                autoCompleteType="password"
+                textContentType="password"
                 secureTextEntry={true}
                 onChangeText={text => setPassword(text)} 
             />
