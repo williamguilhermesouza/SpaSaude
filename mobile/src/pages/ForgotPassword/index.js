@@ -1,6 +1,7 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, Image, TextInput } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, Image, TextInput, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import firebase from 'firebase';
 
 import styles from './styles';
 
@@ -10,8 +11,15 @@ import titleImg from '../../assets/main.jpg';
 export default function ForgotPassword() {
     const navigation = useNavigation();
 
+    [email, setEmail] = useState('');
+
     function navigateToLogin() {
-        navigation.navigate('Login');
+        firebase.auth().sendPasswordResetEmail(email).then( () => {
+            Alert.alert("Sucesso", "E-mail de redefinição enviado!");
+            navigation.navigate('Login');
+        }).catch( (e) => {
+            Alert.alert("Erro", `Erro ${e.message} ao redefinir senha`);
+        });
     };
 
     return (
@@ -26,7 +34,7 @@ export default function ForgotPassword() {
                 style={{ ...styles.input, marginTop: 20 }}
                 placeholder="E-mail" 
                 placeholderTextColor='#777'
-                onChangeText={() => {}} 
+                onChangeText={text => setEmail(text)} 
             />
 
             <TouchableOpacity 
