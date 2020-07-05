@@ -69,18 +69,23 @@ export default function FirstTime() {
             <TextInput 
                 style={styles.input}
                 placeholder="Nome" 
+                autoCapitalize="words"
+                autoCompleteType="name"
+                textContentType="name"
                 onChangeText={text => setName(text)} 
             />
 
             <View style={styles.doubleInput}>
                 <TextInput 
                     style={styles.doubleInputInput}
-                    placeholder="Idade" 
+                    placeholder="Data Nascimento" 
+                    maxLength={10}
                     onChangeText={text => setAge(text)} 
                 />
                 <TextInput 
                     style={styles.doubleInputInput}
                     placeholder="Sexo" 
+                    maxLength={1}
                     onChangeText={text => setSex(text)}
                 />
             </View>
@@ -88,21 +93,32 @@ export default function FirstTime() {
             <TextInput
                 style={styles.input} 
                 placeholder="CPF" 
+                keyboardType="numeric"
+                maxLength={14}
                 onChangeText={text => setCpf(text)}
             />
             <TextInput
                 style={styles.input} 
                 placeholder="E-mail" 
+                autoCompleteType="email"
+                textContentType="emailAddress"
+                keyboardType="email-address"
                 onChangeText={text => setEmail(text)} 
             />
             <TextInput
                 style={styles.input} 
                 placeholder="Telefone" 
+                autoCompleteType="tel"
+                textContentType="telephoneNumber"
+                keyboardType="phone-pad"
+                maxLength={11}
                 onChangeText={text => setPhone(text)}
             />
             <TextInput 
                 style={styles.input} 
                 placeholder="Endereço" 
+                autoCompleteType="street-address"
+                textContentType="streetAddressLine1"
                 onChangeText={text => setAddress(text)}
             />
 
@@ -115,6 +131,7 @@ export default function FirstTime() {
                 <TextInput
                     style={styles.doubleInputInput} 
                     placeholder="Bairro" 
+                    textContentType="sublocality"
                     onChangeText={text => setAnbh(text)}
                 />
             </View>
@@ -123,11 +140,14 @@ export default function FirstTime() {
                 <TextInput 
                     style={styles.doubleInputInput} 
                     placeholder="Cidade" 
+                    textContentType="addressCity"
                     onChangeText={text => setACity(text)} 
                 />
                 <TextInput 
                     style={styles.doubleInputInput} 
                     placeholder="UF" 
+                    textContentType="addressState"
+                    maxLength={2}
                     onChangeText={text => setAState(text)} 
                 />
             </View>
@@ -135,18 +155,23 @@ export default function FirstTime() {
             <TextInput 
                 style={styles.input} 
                 placeholder="Complemento" 
+                textContentType="streetAddressLine2"
                 onChangeText={text => setAComp(text)} 
             />
             <TextInput 
                 style={styles.input} 
                 secureTextEntry={true}
                 placeholder="Senha" 
+                autoCompleteType="password"
+                textContentType="newPassword"
                 onChangeText={text => setPassConf(text)} 
             />
             <TextInput 
                 style={styles.input} 
                 secureTextEntry={true}
                 placeholder="Confirme sua Senha" 
+                autoCompleteType="password"
+                textContentType="newPassword"
                 onChangeText={text => { text == passConf ? setPass(text) : console.log("Different") }} 
             />
 
