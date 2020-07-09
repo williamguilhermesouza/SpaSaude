@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Animated } from 'react-native';
+import { View, Text, TouchableOpacity, Animated, Alert } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 import styles from './styles';
@@ -7,6 +7,7 @@ import styles from './styles';
 export default function MassageView(props) {
     let [ expanded, setExpanded ] = useState(false);
     let [ animation ] = useState(new Animated.Value(50));
+    let [ quantity, setQuantity ] = useState(0);
 
 
     function toggle() {
@@ -23,6 +24,7 @@ export default function MassageView(props) {
 
         Animated.spring(animation, { toValue }).start();
     };
+
 
     return (
             <Animated.View style={{ ...styles.massageView, height: animation }}>
@@ -51,18 +53,18 @@ export default function MassageView(props) {
                     
                 { expanded &&
                     <View style={styles.massageListFooter}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={ () => quantity > 0? setQuantity(quantity - 1) : Alert.alert('Erro', 'Quantidade mínima') } >
                             <Text style={styles.opsText}> - </Text>
                         </TouchableOpacity>
 
-                        <Text style={styles.opsText}> 0 </Text>
+                        <Text style={styles.opsText}> {quantity} </Text>
 
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={ () => quantity < 9? setQuantity(quantity + 1) : Alert.alert('Erro', 'Quantidade máxima') } >
                             <Text style={styles.opsText}> + </Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={styles.addButton}>
-                            <Text style={styles.addButtonText}> Adicionar R$ {props.price},00 </Text>
+                            <Text style={styles.addButtonText}> Adicionar R$ {props.price * quantity},00 </Text>
                         </TouchableOpacity>
                     </View> 
                 }

@@ -26,7 +26,10 @@ export default function Schedule() {
     };
 
     function navigateToConfirmation() {
-        navigation.navigate('Confirmation');
+        navigation.navigate('Confirmation', {
+            date,
+            payment,
+        });
     };
 
     return (

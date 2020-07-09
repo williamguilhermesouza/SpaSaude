@@ -4,8 +4,9 @@ import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
-export default function Confirmation() {
-    const navigation = useNavigation();
+export default function Confirmation(route) {
+    const {date, payment} = route.params;
+    console.log(payment);
 
     function navigateToThanks() {
         navigation.navigate('Thanks');
@@ -16,7 +17,13 @@ export default function Confirmation() {
                 <Text style={styles.confirmationTitle}>Itens Agendados</Text>
 
                 <View style={styles.confirmationList}>
-                    <Text style={styles.confirmationLi}>Massagem Relaxante</Text>
+                    <Text style={styles.confirmationLi}>Massagem Completa</Text>
+                    <Text style={styles.confirmationLi}>2</Text>
+                    <Text style={styles.confirmationLi}>R$ 100,00 </Text>
+                </View>
+
+                <View style={styles.confirmationList}>
+                    <Text style={styles.confirmationLi}>Massagem Pedras</Text>
                     <Text style={styles.confirmationLi}>2</Text>
                     <Text style={styles.confirmationLi}>R$ 100,00 </Text>
                 </View>
@@ -28,23 +35,11 @@ export default function Confirmation() {
                 </View>
 
                 <View style={styles.confirmationList}>
-                    <Text style={styles.confirmationLi}>Massagem Relaxante</Text>
+                    <Text style={styles.confirmationLi}>Massagem Celulite</Text>
                     <Text style={styles.confirmationLi}>2</Text>
                     <Text style={styles.confirmationLi}>R$ 100,00 </Text>
                 </View>
 
-                <View style={styles.confirmationList}>
-                    <Text style={styles.confirmationLi}>Massagem Relaxante</Text>
-                    <Text style={styles.confirmationLi}>2</Text>
-                    <Text style={styles.confirmationLi}>R$ 100,00 </Text>
-                </View>
-
-                <View style={styles.confirmationList}>
-                    <Text style={styles.confirmationLi}>Massagem Relaxante</Text>
-                    <Text style={styles.confirmationLi}>2</Text>
-                    <Text style={styles.confirmationLi}>R$ 100,00 </Text>
-                </View>
-                
             </View>
 
             <TouchableOpacity 
