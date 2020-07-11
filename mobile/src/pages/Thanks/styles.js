@@ -28,7 +28,7 @@ export default StyleSheet.create({
 
     newText: {
         paddingTop: 15,
-        fontSize: 26,
+        fontSize: 20,
         fontFamily: 'ABeeZee',
     },
 });

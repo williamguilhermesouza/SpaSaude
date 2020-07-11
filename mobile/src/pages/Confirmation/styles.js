@@ -8,7 +8,7 @@ export default StyleSheet.create({
     },
 
     confirmationBox: {
-        width: '80%',
+        width: '90%',
         backgroundColor: '#FDD4C3',
         alignItems: 'center',
         paddingTop: 20,
@@ -25,6 +25,7 @@ export default StyleSheet.create({
 
     confirmationList: {
         width: '80%',
+            marginRight: 20,
         flexDirection: 'row',
     },
 

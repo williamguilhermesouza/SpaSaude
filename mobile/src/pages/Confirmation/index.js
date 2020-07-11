@@ -16,7 +16,7 @@ export default function Confirmation() {
         email(to, {
             subject: 'Reserva de Horário',
             body: `Olá, gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
-            para celulite, Para ${date.toString()}.`
+            para Celulite, para ${date.toString()}.`
         }).catch(console.error);
     }
 

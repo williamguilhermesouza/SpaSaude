@@ -16,7 +16,7 @@ export default function MassageView(props) {
             toValue = 50;
         }
         else {
-            toValue = 300;
+            toValue = 400;
         }
 
         setExpanded(!expanded);
