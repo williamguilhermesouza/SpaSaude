@@ -9,7 +9,10 @@
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "0.1.0",
+    "android": {
+        "package": "com.spasaude.spasaude",
+    },
     "orientation": "portrait",
     "splash": {
       "resizeMode": "contain",
