@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -7,22 +7,31 @@ import MassageView from '../../components/MassageView';
 
 export default function Attendance() {
     const navigation = useNavigation();
+    let [complete, setComplete] = useState(0);
+    let [stones, setStones] = useState(0);
+    let [relax, setRelax] = useState(0);
+    let [celulite, setCelulite] = useState(0);
     
 
     function navigateToSchedule() {
-        navigation.navigate('Schedule');
+        navigation.navigate('Schedule', {
+            complete,
+            stones,
+            relax,
+            celulite,
+        });
     };
 
     return (
         <View style={styles.container}>
             <ScrollView style={styles.scrollContainer}>
-                <MassageView title='Massagem Completa' price={150}/>
+                <MassageView title='Massagem Completa' price={150} quantity={ (qtd) => setComplete(qtd)} />
 
-                <MassageView title='Massagem Pedras' price={100}/>
+                <MassageView title='Massagem Pedras' price={100} quantity={ qtd => setStones(qtd)} />
 
-                <MassageView title='Massagem Relaxante' price={120}/>
+                <MassageView title='Massagem Relaxante' price={120} quantity={ qtd => setRelax(qtd)} />
 
-                <MassageView title='Tratamento Celulite' price={100}/>
+                <MassageView title='Tratamento Celulite' price={100} quantity={ qtd => setCelulite(qtd)} />
 
             </ScrollView>
 

@@ -15,7 +15,7 @@ export default function Schedule() {
     return (
         <View style={styles.container}>
 
-            <Text style={styles.thanksLabel}>Obrigado!!!</Text>
+            <Text style={styles.thanksLabel}>Obrigada!!!</Text>
 
             <TouchableOpacity 
                 style={styles.newButton}

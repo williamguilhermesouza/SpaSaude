@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Platform } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import SegmentedControl from '@react-native-community/segmented-control';
 
@@ -9,7 +9,9 @@ import styles from './styles';
 
 export default function Schedule() {
     const navigation = useNavigation();
-    let [payment, setPayment] = useState('Dinheiro');
+    const route = useRoute();
+    const { complete, stones, relax, celulite } = route.params;
+    let [payment, setPayment] = useState(0);
     let [date, setDate] = useState(Date.now());
     let [mode, setMode] = useState('date');
     let [show, setShow] = useState(false);
@@ -26,9 +28,16 @@ export default function Schedule() {
     };
 
     function navigateToConfirmation() {
+        const payList = ["Dinheiro", "Débito", "Crédito"];
+        payment = payList[payment];
+
         navigation.navigate('Confirmation', {
             date,
             payment,
+            complete,
+            stones,
+            relax,
+            celulite,
         });
     };
 
@@ -53,6 +62,7 @@ export default function Schedule() {
                 <DateTimePicker
                     value={date}
                     mode={mode}
+                    minimumDate={Date.now()}
                     is24Hour={true}
                     display='spinner'
                     onChange={calendarChangeHandler}

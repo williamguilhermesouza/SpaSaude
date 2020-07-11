@@ -9,7 +9,6 @@ export default function MassageView(props) {
     let [ animation ] = useState(new Animated.Value(50));
     let [ quantity, setQuantity ] = useState(0);
 
-
     function toggle() {
         let toValue;
 
@@ -63,7 +62,7 @@ export default function MassageView(props) {
                             <Text style={styles.opsText}> + </Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.addButton}>
+                        <TouchableOpacity style={styles.addButton} onPress={ props.quantity(quantity) }>
                             <Text style={styles.addButtonText}> Adicionar R$ {props.price * quantity},00 </Text>
                         </TouchableOpacity>
                     </View> 
