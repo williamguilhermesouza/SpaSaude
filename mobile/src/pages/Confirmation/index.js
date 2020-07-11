@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import email from 'react-native-email';
 
 import styles from './styles';
 
@@ -10,7 +11,17 @@ export default function Confirmation() {
     const route = useRoute();
     const { date, payment, complete, stones, relax, celulite } = route.params;
 
+    function handleEmail() {
+        const to = ['larissatf@yahoo.com.br'];
+        email(to, {
+            subject: 'Reserva de Horário',
+            body: `Olá, gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
+            para celulite, Para ${date.toString()}.`
+        }).catch(console.error);
+    }
+
     function navigateToThanks() {
+        handleEmail();
         navigation.navigate('Thanks');
     };
     return (
