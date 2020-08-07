@@ -28,13 +28,11 @@ export default function Confirmation() {
     */
 
         const response = await api.post('/sendEmail', {
-            params: {
-               complete: complete,
-               stones: stones,
-               relax: relax,
-               celulite: celulite,
-               date: date,
-            }
+           complete: complete,
+           stones: stones,
+           relax: relax,
+           celulite: celulite,
+           date: date,
         });
     }
 

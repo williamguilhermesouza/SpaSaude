@@ -15,13 +15,21 @@ let url = `smtps://${credentials.email}%40gmail.com:${credentials.pass}@smtp.gma
 let transporter = nodemailer.createTransport(url);
 
 exports.sendEmail = functions.https.onRequest(async (req, res) => {
+    console.log(req.body);
+
+    const complete = req.body.complete;
+    const stones = req.body.stones;
+    const relax = req.body.relax;
+    const celulite = req.body.celulite;
+    const date = req.body.date.toString();
+
     let from = '"Spa Saude" <spasaude.fisio@gmail.com>';
-    let to = 'larissatf@yahoo.com.br';
+    let to = 'williamguilhermesouza@gmail.com';
     let subject = 'Reserva de Horário';
-    let text = `Olá, gostaria de reservar ${req.complete} Massagens Completas, ${req.stones} Massagem com Pedras, ${req.relax} Massagem Relaxante, e ${req.celulite} Tratamento
-        para Celulite, para ${req.date}.`;
-    let html = `Olá, gostaria de reservar ${req.complete} Massagens Completas, ${req.stones} Massagem com Pedras, ${req.relax} Massagem Relaxante, e ${req.celulite} Tratamento
-        para Celulite, para ${req.date}.`;
+    let text = `Olá, gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
+        para Celulite, para ${date}.`;
+    let html = `Olá, gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
+        para Celulite, para ${date}.`;
 
     let email = {
         from: from,
