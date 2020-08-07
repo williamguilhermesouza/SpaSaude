@@ -9,19 +9,18 @@ const functions = require('firebase-functions');
 // });
 
 const nodemailer = require('nodemailer');
-const cors = require('cors')({origin: true});
 const credentials = require('./email');
 
 let url = `smtps://${credentials.email}%40gmail.com:${credentials.pass}@smtp.gmail.com:465`;
 let transporter = nodemailer.createTransport(url);
 
-exports.sendEmail = functions.https.onRequest( (req, res) => {
+exports.sendEmail = functions.https.onRequest(async (req, res) => {
     let from = '"Spa Saude" <spasaude.fisio@gmail.com>';
     let to = 'larissatf@yahoo.com.br';
     let subject = 'Reserva de Horário';
     let text = `Olá, gostaria de reservar ${req.complete} Massagens Completas, ${req.stones} Massagem com Pedras, ${req.relax} Massagem Relaxante, e ${req.celulite} Tratamento
         para Celulite, para ${req.date}.`;
-    let html = `Olá, gostaria de reservar ${req.complete} Massagens Completas, ${req.stones} Massagem com Pedras, ${req.relax} Massagem Relaxante, e ${celulite} Tratamento
+    let html = `Olá, gostaria de reservar ${req.complete} Massagens Completas, ${req.stones} Massagem com Pedras, ${req.relax} Massagem Relaxante, e ${req.celulite} Tratamento
         para Celulite, para ${req.date}.`;
 
     let email = {

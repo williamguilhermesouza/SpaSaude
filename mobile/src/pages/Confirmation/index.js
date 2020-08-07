@@ -27,7 +27,7 @@ export default function Confirmation() {
         }).catch(console.error);
     */
 
-        const response = await api.get('/sendEmail', {
+        const response = await api.post('/sendEmail', {
             params: {
                complete: complete,
                stones: stones,
