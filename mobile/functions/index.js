@@ -16,29 +16,27 @@ let url = `smtps://${credentials.email}%40gmail.com:${credentials.pass}@smtp.gma
 let transporter = nodemailer.createTransport(url);
 
 exports.sendEmail = functions.https.onRequest( (req, res) => {
-    cors(req, res, () => {
-        let from = '"Spa Saude" <spasaude.fisio@gmail.com>';
-        let to = 'larissatf@yahoo.com.br';
-        let subject = 'Reserva de Horário';
-        let text = `Olá, gostaria de reservar ${req.complete} Massagens Completas, ${req.stones} Massagem com Pedras, ${req.relax} Massagem Relaxante, e ${req.celulite} Tratamento
-            para Celulite, para ${req.date.toString()}.`;
-        let html = `Olá, gostaria de reservar ${req.complete} Massagens Completas, ${req.stones} Massagem com Pedras, ${req.relax} Massagem Relaxante, e ${celulite} Tratamento
-            para Celulite, para ${req.date.toString()}.`;
+    let from = '"Spa Saude" <spasaude.fisio@gmail.com>';
+    let to = 'larissatf@yahoo.com.br';
+    let subject = 'Reserva de Horário';
+    let text = `Olá, gostaria de reservar ${req.complete} Massagens Completas, ${req.stones} Massagem com Pedras, ${req.relax} Massagem Relaxante, e ${req.celulite} Tratamento
+        para Celulite, para ${req.date}.`;
+    let html = `Olá, gostaria de reservar ${req.complete} Massagens Completas, ${req.stones} Massagem com Pedras, ${req.relax} Massagem Relaxante, e ${celulite} Tratamento
+        para Celulite, para ${req.date}.`;
 
-        let email = {
-            from,
-            to,
-            subject,
-            text,
-            html,
+    let email = {
+        from: from,
+        to: to,
+        subject: subject,
+        text: text,
+        html: html,
+    }
+
+    transporter.sendMail(email, (e, info) => {
+        if (e) {
+            return console.log(e + info);
         }
-
-        transporter.sendMail(email, (e, info) => {
-            if (e) {
-                return console.log(e);
-            }
-            return console.log('Mensagem enviada');
-        });
+        return console.log('Mensagem enviada');
     });
 });
 

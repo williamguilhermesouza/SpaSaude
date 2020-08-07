@@ -1,9 +1,14 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import email from 'react-native-email';
+import axios from 'axios'; 
 
 import styles from './styles';
+
+const api = axios.create({
+    baseURL: 'https://us-central1-spa-saude.cloudfunctions.net/',
+})
+
 
 export default function Confirmation() {
     const navigation = useNavigation();
@@ -11,7 +16,7 @@ export default function Confirmation() {
     const route = useRoute();
     const { date, payment, complete, stones, relax, celulite } = route.params;
 
-    function handleEmail() {
+    async function handleEmail() {
         
     /*
      * const to = ['larissatf@yahoo.com.br'];
@@ -22,8 +27,15 @@ export default function Confirmation() {
         }).catch(console.error);
     */
 
-
-        console.log('enviado');
+        const response = await api.get('/sendEmail', {
+            params: {
+               complete: complete,
+               stones: stones,
+               relax: relax,
+               celulite: celulite,
+               date: date,
+            }
+        });
     }
 
     function navigateToThanks() {
