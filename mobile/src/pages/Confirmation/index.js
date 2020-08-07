@@ -12,12 +12,18 @@ export default function Confirmation() {
     const { date, payment, complete, stones, relax, celulite } = route.params;
 
     function handleEmail() {
-        const to = ['larissatf@yahoo.com.br'];
+        
+    /*
+     * const to = ['larissatf@yahoo.com.br'];
         email(to, {
             subject: 'Reserva de Horário',
             body: `Olá, gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
             para Celulite, para ${date.toString()}.`
         }).catch(console.error);
+    */
+
+
+        console.log('enviado');
     }
 
     function navigateToThanks() {
