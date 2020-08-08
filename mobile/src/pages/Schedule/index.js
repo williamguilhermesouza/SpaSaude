@@ -10,7 +10,7 @@ import styles from './styles';
 export default function Schedule() {
     const navigation = useNavigation();
     const route = useRoute();
-    const { complete, stones, relax, celulite } = route.params;
+    const { complete, stones, relax, celulite, email } = route.params;
     let [payment, setPayment] = useState(0);
     let [date, setDate] = useState(Date.now());
     let [mode, setMode] = useState('date');
@@ -38,6 +38,7 @@ export default function Schedule() {
             stones,
             relax,
             celulite,
+            email
         });
     };
 

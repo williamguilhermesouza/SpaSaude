@@ -40,7 +40,13 @@ export default function FirstTime() {
         }
 
         if ( typeof auth != 'undefined') {
-            firebase.database().ref('users/' + name).set({
+            let db_name = '';
+           
+            for (let i = 0; i < 4; i++) {
+                db_name += email[i];
+            }
+
+            firebase.database().ref('users/' + db_name).set({
                 'name': name,
                 'age': age,
                 'sex': sex,

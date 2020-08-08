@@ -22,13 +22,15 @@ exports.sendEmail = functions.https.onRequest(async (req, res) => {
     const relax = req.body.relax;
     const celulite = req.body.celulite;
     const date = req.body.date.toString();
+    const name = req.body.name;
+    const address = req.body.address;
 
     let from = '"Spa Saude" <spasaude.fisio@gmail.com>';
     let to = 'williamguilhermesouza@gmail.com';
     let subject = 'Reserva de Horário';
-    let text = `Olá, gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
+    let text = `Olá, me chamo ${name} e moro em ${address} e gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
         para Celulite, para ${date}.`;
-    let html = `Olá, gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
+    let html = `Olá, me chamo ${name} e moro em ${address} e gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
         para Celulite, para ${date}.`;
 
     let email = {

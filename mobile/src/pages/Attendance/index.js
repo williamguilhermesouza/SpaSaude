@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 import styles from './styles';
 import MassageView from '../../components/MassageView';
 
 export default function Attendance() {
     const navigation = useNavigation();
+    const route = useRoute();
+    const { email } = route.params;
+
     let [complete, setComplete] = useState(0);
     let [stones, setStones] = useState(0);
     let [relax, setRelax] = useState(0);
@@ -19,6 +22,7 @@ export default function Attendance() {
             stones,
             relax,
             celulite,
+            email,
         });
     };
 

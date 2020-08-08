@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import axios from 'axios'; 
+import firebase from 'firebase';
 
 import styles from './styles';
 
@@ -14,7 +15,7 @@ export default function Confirmation() {
     const navigation = useNavigation();
 
     const route = useRoute();
-    const { date, payment, complete, stones, relax, celulite } = route.params;
+    const { email, date, payment, complete, stones, relax, celulite } = route.params;
 
     async function handleEmail() {
         
@@ -26,13 +27,29 @@ export default function Confirmation() {
             para Celulite, para ${date.toString()}.`
         }).catch(console.error);
     */
+        var name_rcv, address_rcv;
+
+        let identifier = '';
+
+        for (let i = 0; i < 4; i++) {
+            identifier += email[i];
+        }
+
+        await firebase.database().ref('/users/' + identifier).once('value').then( snapshot => {
+            name_rcv = snapshot.val().name;
+            address_rcv = snapshot.val().address;
+        });
+
 
         const response = await api.post('/sendEmail', {
-           complete: complete,
-           stones: stones,
-           relax: relax,
-           celulite: celulite,
-           date: date,
+            complete,
+            stones,
+            relax,
+            celulite,
+            date,
+            email,
+            name: name_rcv,
+            address: address_rcv,
         });
     }
 

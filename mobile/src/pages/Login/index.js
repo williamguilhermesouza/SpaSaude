@@ -22,7 +22,9 @@ export default function Login() {
         });
         
         if (typeof auth != 'undefined') {
-            navigation.navigate('Attendance');
+            navigation.navigate('Attendance', {
+                email,
+            });
         }
     };
 
