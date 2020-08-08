@@ -28,17 +28,19 @@ export default function MassageView(props) {
     return (
             <Animated.View style={{ ...styles.massageView, height: animation }}>
 
-                <TouchableOpacity onPress={toggle}>
-                    <View style={styles.massageHeader}>
+                <TouchableOpacity 
+                    onPress={toggle}
+                    style={styles.massageHeader}
+                >
                         <Text style={styles.massageHeaderTitle}>{props.title}</Text>
                         <TouchableOpacity
                             style={styles.expandCollapseButton}
+                            onPress={toggle}
                         >
                             <AntDesign name={expanded? 'up' : 'down'} size={20} color='black' />
                         </TouchableOpacity>
-                    </View>
-
                 </TouchableOpacity>
+
                 { expanded &&
                     <View style={styles.massageList}>
                         <Text style={styles.massageListTitle}>Pedras Quentes</Text>

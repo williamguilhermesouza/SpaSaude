@@ -29,13 +29,13 @@ export default function Attendance() {
     return (
         <View style={styles.container}>
             <ScrollView style={styles.scrollContainer}>
-                <MassageView title='Massagem Completa' price={150} quantity={ (qtd) => setComplete(qtd)} />
+                <MassageView title='Pedras Quentes' price={100} quantity={ (qtd) => setComplete(qtd)} />
 
-                <MassageView title='Massagem Pedras' price={100} quantity={ qtd => setStones(qtd)} />
+                <MassageView title='Massagem Completa' price={150} quantity={ qtd => setStones(qtd)} />
 
-                <MassageView title='Massagem Relaxante' price={120} quantity={ qtd => setRelax(qtd)} />
+                <MassageView title='Massagem Localizada' price={100} quantity={ qtd => setRelax(qtd)} />
 
-                <MassageView title='Tratamento Celulite' price={100} quantity={ qtd => setCelulite(qtd)} />
+                <MassageView title='Tratamento para celulite' price={120} quantity={ qtd => setCelulite(qtd)} />
 
             </ScrollView>
 
