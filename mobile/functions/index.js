@@ -24,14 +24,15 @@ exports.sendEmail = functions.https.onRequest(async (req, res) => {
     const date = req.body.date.toString();
     const name = req.body.name;
     const address = req.body.address;
+    let email_ad = req.body.email;
 
-    let from = '"Spa Saude" <spasaude.fisio@gmail.com>';
+    let from = '"Spa Saude" <spasaude.fisio@gmail.com';
     let to = 'williamguilhermesouza@gmail.com';
     let subject = 'Reserva de Horário';
     let text = `Olá, me chamo ${name} e moro em ${address} e gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
-        para Celulite, para ${date}.`;
+        para Celulite, para ${date.toString()}. Meu email para contato é ${email_ad}`;
     let html = `Olá, me chamo ${name} e moro em ${address} e gostaria de reservar ${complete} Massagens Completas, ${stones} Massagem com Pedras, ${relax} Massagem Relaxante, e ${celulite} Tratamento
-        para Celulite, para ${date}.`;
+        para Celulite, para ${date.toString()}. Meu email para contato é ${email_ad}`;
 
     let email = {
         from: from,
