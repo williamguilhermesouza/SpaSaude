@@ -16,6 +16,11 @@ export default function Login() {
     function navigateTofPass() {
         navigation.navigate('ForgotPassword');
     };
+
+    async function navigateToFirst() {
+        navigation.navigate('FirstTime');
+    };
+
     async function navigateToAttendance() {
         let auth = await firebase.auth().signInWithEmailAndPassword(email, password).catch( e => {
             Alert.alert("Login Incorreto", e.message);
@@ -60,6 +65,14 @@ export default function Login() {
             >
                 <Text style={styles.fPassText}>Esqueceu a senha?</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity 
+                style={styles.firstTime}
+                onPress={navigateToFirst}
+            >
+                <Text style={styles.fPassText}>Primeira Vez</Text>
+            </TouchableOpacity>
+
 
             <TouchableOpacity 
                 style={styles.entryButton}

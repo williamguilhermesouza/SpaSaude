@@ -47,7 +47,11 @@ export default StyleSheet.create({
     },
 
     fPassLink: {
-        padding: 10,
+        paddingTop: 10,
+    },
+
+    firstTime: {
+        paddingBottom: 10,
         marginBottom: 20,
     },
 

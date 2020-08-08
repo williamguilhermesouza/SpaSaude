@@ -27,9 +27,8 @@ export default function Routes() {
     return (
         <NavigationContainer>
             <AppStack.Navigator>
-                <AppStack.Screen name="Main" component={Main} options={{ headerShown: false }} />
+                <AppStack.Screen name="Login" component={Login} options={{headerShown: false}}/>
                 <AppStack.Screen name="FirstTime" component={FirstTime} options={headerOptions('Primeira Vez')}/>
-                <AppStack.Screen name="Login" component={Login} options={headerOptions('Login')}/>
                 <AppStack.Screen name="ForgotPassword" component={ForgotPassword} options={headerOptions('Esqueceu a Senha?')}/>
                 <AppStack.Screen name="Attendance" component={Attendance} options={headerOptions('Escolha seu Atendimento')}/>
                 <AppStack.Screen name="Schedule" component={Schedule} options={headerOptions('Agende seu Horário')}/>
