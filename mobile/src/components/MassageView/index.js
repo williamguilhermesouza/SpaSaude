@@ -8,6 +8,7 @@ export default function MassageView(props) {
     let [ expanded, setExpanded ] = useState(false);
     let [ animation ] = useState(new Animated.Value(50));
     let [ quantity, setQuantity ] = useState(0);
+    let benefits_list = [];
 
     function toggle() {
         let toValue;
@@ -16,13 +17,17 @@ export default function MassageView(props) {
             toValue = 50;
         }
         else {
-            toValue = 400;
+            toValue = 450;
         }
 
         setExpanded(!expanded);
 
         Animated.spring(animation, { toValue }).start();
     };
+
+    for (const [index, benefit] of props.benefits.entries()) {
+        benefits_list.push(<Text>&#9679;{benefit} ;</Text>);
+    }
 
 
     return (
@@ -43,15 +48,18 @@ export default function MassageView(props) {
 
                 { expanded &&
                     <View style={styles.massageList}>
-                        <Text style={styles.massageListTitle}>Pedras Quentes</Text>
-                        <Text>&#9679; Aumento da circulação sanguínea;</Text>
-                        <Text>&#9679; Relaxamento profundo;</Text>
-                        <Text>&#9679; Aumento da drenagem linfática;</Text>
-                        <Text>&#9679; Alívio das dores musculares;</Text>
-                        <Text>&#9679; Diminuição do estresse e tensões;</Text>
-                        <Text>&#9679; Aumento do bem estar;</Text>
+                        <Text style={styles.massageListTitle}>Procedimento:</Text>
+                        <Text>{props.procedure}</Text>
                     </View>
                 }
+
+                { expanded &&
+                    <View style={styles.massageList}>
+                        <Text style={styles.massageListTitle}>Benefícios:</Text>
+                        {benefits_list}
+                   </View>
+                }
+ 
                     
                 { expanded &&
                     <View style={styles.massageListFooter}>
