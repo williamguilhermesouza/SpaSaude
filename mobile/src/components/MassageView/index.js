@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Animated, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, Animated, Alert, Dimensions } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 import styles from './styles';
@@ -9,6 +9,7 @@ export default function MassageView(props) {
     let [ animation ] = useState(new Animated.Value(50));
     let [ quantity, setQuantity ] = useState(0);
     let benefits_list = [];
+    let windowHeight = Dimensions.get('window').height;
 
     function toggle() {
         let toValue;
@@ -17,7 +18,7 @@ export default function MassageView(props) {
             toValue = 50;
         }
         else {
-            toValue = 450;
+            toValue = 500  - windowHeight ;
         }
 
         setExpanded(!expanded);
@@ -26,7 +27,7 @@ export default function MassageView(props) {
     };
 
     for (const [index, benefit] of props.benefits.entries()) {
-        benefits_list.push(<Text>&#9679;{benefit} ;</Text>);
+        benefits_list.push(<Text key={index}>&#9679;{benefit} ;</Text>);
     }
 
 

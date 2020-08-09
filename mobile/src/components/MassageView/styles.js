@@ -50,6 +50,7 @@ export default StyleSheet.create({
     massageListFooter: {
         flexDirection: 'row',
         width: '85%',
+        paddingBottom: 20,
 
     },
 
