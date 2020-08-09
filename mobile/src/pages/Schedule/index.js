@@ -10,16 +10,22 @@ import styles from './styles';
 export default function Schedule() {
     const navigation = useNavigation();
     const route = useRoute();
-    const { complete, stones, relax, celulite } = route.params;
+    const { complete, stones, relax, celulite, email } = route.params;
     let [payment, setPayment] = useState(0);
     let [date, setDate] = useState(Date.now());
     let [mode, setMode] = useState('date');
     let [show, setShow] = useState(false);
 
+    let [date_display, setDateDisplay] = useState('Data');
+    let [time_display, setTimeDisplay] = useState('Horários Disponíveis');
+
+
     function calendarChangeHandler(event, selectedDate) {
         const currentDate = selectedDate || date;
         setShow(Platform.OS === 'ios');
         setDate(currentDate);
+        setDateDisplay(date.toLocaleDateString('pt-BR'));
+        setTimeDisplay(date.toLocaleTimeString('pt-BR'));
     };
 
     function showCalendar(currentMode) {
@@ -38,6 +44,7 @@ export default function Schedule() {
             stones,
             relax,
             celulite,
+            email
         });
     };
 
@@ -48,14 +55,14 @@ export default function Schedule() {
                 style={styles.pickerButton}
                 onPress={() => showCalendar('date')}
             >
-                <Text style={styles.pickerButtonText}>Data</Text>
+                <Text style={styles.pickerButtonText}>{date_display}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.pickerButton}
                 onPress={() => showCalendar('time')}
             >
-                <Text style={styles.pickerButtonText}>Horários Disponíveis</Text>
+                <Text style={styles.pickerButtonText}>{time_display}</Text>
             </TouchableOpacity>
 
             {show &&
@@ -73,7 +80,7 @@ export default function Schedule() {
                 <Text style={styles.paymentLabel}>Forma de Pagamento</Text>
                 <SegmentedControl  
                     selectedIndex={payment}
-                    backgroundColor='pink'
+                    backgroundColor='#F4AA8A'
                     values={['Dinheiro', 'Débito', 'Crédito']}
                     onChange={ (event) => { setPayment(event.nativeEvent.selectedSegmentIndex); }}
                 />

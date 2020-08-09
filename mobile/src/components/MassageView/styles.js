@@ -2,15 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
 
-    massageCollapseOpacity: {
-        alignItems: 'center',
-        marginBottom: 45,
-        width: '80%',
-        height: '9%',
-        backgroundColor: '#FDD4C3',
-        borderRadius: 15,
-    },
-
     massageView: {
         alignSelf: 'center',
         alignItems: 'center',
@@ -22,15 +13,15 @@ export default StyleSheet.create({
 
     massageHeader: {
         flexDirection: 'row',
+        marginLeft: 15,
+        marginRight: 15,
+        alignSelf: 'stretch',
+        textAlign: 'justify',
         paddingTop: 5,
-        marginLeft: -35,
-        marginRight: 10,
-        alignItems: 'stretch',
+        justifyContent: 'space-between',
     },
 
     massageHeaderTitle: {
-        marginLeft: '15%',
-        marginRight: '10%',
         fontSize: 20,
         fontStyle: 'italic',
         fontFamily: 'ABeeZee',
@@ -59,6 +50,7 @@ export default StyleSheet.create({
     massageListFooter: {
         flexDirection: 'row',
         width: '85%',
+        paddingBottom: 20,
 
     },
 

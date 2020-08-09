@@ -14,15 +14,8 @@ export default function Schedule() {
     
     return (
         <View style={styles.container}>
-
-            <Text style={styles.thanksLabel}>Obrigada!!!</Text>
-
-            <TouchableOpacity 
-                style={styles.newButton}
-                onPress={navigateToAttendance}
-            >
-                <Text style={styles.newText}>Novo Agendamento</Text>
-            </TouchableOpacity>
+            <Text style={styles.thanksLabel}>Você receberá um email da especialista confirmando seu atendimento.</Text>
+            <Text style={styles.thanksLabel2}>Spa&Saude agradece seu contato.</Text>
         </View>
     );
 };
