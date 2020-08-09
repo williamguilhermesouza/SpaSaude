@@ -16,10 +16,16 @@ export default function Schedule() {
     let [mode, setMode] = useState('date');
     let [show, setShow] = useState(false);
 
+    let [date_display, setDateDisplay] = useState('Data');
+    let [time_display, setTimeDisplay] = useState('Horários Disponíveis');
+
+
     function calendarChangeHandler(event, selectedDate) {
         const currentDate = selectedDate || date;
         setShow(Platform.OS === 'ios');
         setDate(currentDate);
+        setDateDisplay(date.toLocaleDateString('pt-BR'));
+        setTimeDisplay(date.toLocaleTimeString('pt-BR'));
     };
 
     function showCalendar(currentMode) {
@@ -49,14 +55,14 @@ export default function Schedule() {
                 style={styles.pickerButton}
                 onPress={() => showCalendar('date')}
             >
-                <Text style={styles.pickerButtonText}>Data</Text>
+                <Text style={styles.pickerButtonText}>{date_display}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.pickerButton}
                 onPress={() => showCalendar('time')}
             >
-                <Text style={styles.pickerButtonText}>Horários Disponíveis</Text>
+                <Text style={styles.pickerButtonText}>{time_display}</Text>
             </TouchableOpacity>
 
             {show &&
