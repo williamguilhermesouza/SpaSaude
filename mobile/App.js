@@ -3,7 +3,7 @@ import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import Routes from './src/routes';
 
-
+import './src/firebase.config';
 
 export default function App() {
   let [fonts, setFonts] = useState(true);

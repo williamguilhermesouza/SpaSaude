@@ -2,35 +2,26 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
 
-    massageCollapseOpacity: {
-        alignItems: 'center',
-        marginBottom: 45,
-        width: '80%',
-        height: '9%',
-        backgroundColor: '#FDD4C3',
-        borderRadius: 15,
-    },
-
     massageView: {
         alignSelf: 'center',
         alignItems: 'center',
         marginBottom: 45,
         width: '80%',
-        height: '60%',
         backgroundColor: '#FDD4C3',
         borderRadius: 15,
     },
 
     massageHeader: {
-        paddingTop: 10,
-        width: '85%',
         flexDirection: 'row',
-        alignItems: 'stretch',
+        marginLeft: 15,
+        marginRight: 15,
+        alignSelf: 'stretch',
+        textAlign: 'justify',
+        paddingTop: 5,
+        justifyContent: 'space-between',
     },
 
     massageHeaderTitle: {
-        marginLeft: '15%',
-        marginRight: '10%',
         fontSize: 20,
         fontStyle: 'italic',
         fontFamily: 'ABeeZee',
@@ -43,7 +34,7 @@ export default StyleSheet.create({
     massageList: {
         alignItems: 'flex-start',
         width: '86%',
-        height: '65%',
+        marginBottom: 30,
     },
 
     massageListTitle: {
@@ -58,14 +49,14 @@ export default StyleSheet.create({
 
     massageListFooter: {
         flexDirection: 'row',
-        marginTop: 20,
         width: '85%',
+        paddingBottom: 20,
 
     },
 
     opsText: {
         fontWeight: 'bold',
-        fontSize: 22,
+        fontSize: 18,
     },
 
     addButton: {
@@ -79,7 +70,7 @@ export default StyleSheet.create({
     addButtonText: {
         paddingTop: 5,
         fontFamily: 'ABeeZee',
-        fontSize: 18,
+        fontSize: 14,
         paddingBottom: 5,
     },
 

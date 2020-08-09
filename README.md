@@ -1,4 +1,7 @@
 # Spa&Saude Mobile App
+![GitHub](https://img.shields.io/github/license/williamguilhermesouza/SpaSaude)
+![Repo-size](https://img.shields.io/github/repo-size/williamguilhermesouza/SpaSaude)
+![Last-commit](https://img.shields.io/github/last-commit/williamguilhermesouza/SpaSaude)
 
 # Spa&Saude Mobile Care App
 

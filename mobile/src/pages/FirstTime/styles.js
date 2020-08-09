@@ -36,15 +36,15 @@ export default StyleSheet.create({
         marginTop: 60,
         alignItems: 'center',
         marginLeft: 35,
-        width: '60%',
-        height: '9%',
+        width: 140,
+        height: 50,
         backgroundColor: '#F4AA8A',
         borderRadius: 10,
     },
 
     avancarText: {
         paddingTop: 10,
-        fontSize: 26,
+        fontSize: 18,
         fontFamily: 'ABeeZee',
     }
 });

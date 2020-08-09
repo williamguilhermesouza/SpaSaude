@@ -9,9 +9,18 @@ export default StyleSheet.create({
 
     thanksLabel: {
         marginTop: '45%',
-        marginBottom: '35%',
+        width: '80%',
+        textAlign: 'center',
+        marginBottom: 22,
         fontFamily: 'ABeeZee',
-        fontSize: 28,
+        fontSize: 22,
+    },
+
+    thanksLabel2: {
+        width: '80%',
+        textAlign: 'center',
+        fontFamily: 'ABeeZee',
+        fontSize: 18,
     },
 
     newButton: {
@@ -28,7 +37,7 @@ export default StyleSheet.create({
 
     newText: {
         paddingTop: 15,
-        fontSize: 26,
+        fontSize: 20,
         fontFamily: 'ABeeZee',
     },
 });

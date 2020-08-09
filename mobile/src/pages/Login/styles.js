@@ -2,16 +2,17 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     container: {
-        marginTop: 50,
+        alignContent: 'center',
+        justifyContent: 'center',
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
     },
 
     image: {
-        width: '50%',
-        height: '35%',
-        borderRadius: 100,
+        width: 300,
+        height: 250,
+        borderRadius: 400,
         opacity: 0.5,
     },
 
@@ -23,7 +24,7 @@ export default StyleSheet.create({
     },
 
     title: {
-        fontSize: 52,
+        fontSize: 48,
         fontFamily: 'IM Fell Double Pica',
     },
 
@@ -43,31 +44,35 @@ export default StyleSheet.create({
         borderRadius: 12,
         textAlign: 'center',
         fontStyle: 'italic',
-        fontSize: 22,
+        fontSize: 19,
     },
 
     fPassLink: {
-        padding: 10,
+        paddingTop: 10,
+    },
+
+    firstTime: {
+        paddingBottom: 10,
         marginBottom: 20,
     },
 
     fPassText: {
         fontStyle: 'italic',
         color: '#777',
-        fontSize: 17,
+        fontSize: 16,
     },
 
     entryButton: {
         alignItems: 'center',
-        width: '60%',
-        height: '9%',
+        width: 140,
+        height: 50,
         backgroundColor: '#F4AA8A',
         borderRadius: 10,
     },
 
     entryText: {
         paddingTop: 10,
-        fontSize: 26,
+        fontSize: 18,
         fontFamily: 'ABeeZee',
     },
 });
