@@ -13,6 +13,7 @@
     "icon":"./assets/icon.png",
     "android": {
         "package": "com.spasaude.spasaude",
+        "versionCode": 2
     },
     "orientation": "portrait",
     "splash": {
