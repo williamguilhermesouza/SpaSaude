@@ -2,16 +2,17 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     container: {
-        marginTop: 50,
+        alignContent: 'center',
+        justifyContent: 'center',
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
     },
 
     image: {
-        width: '50%',
-        height: '35%',
-        borderRadius: 100,
+        width: 300,
+        height: 250,
+        borderRadius: 400,
         opacity: 0.5,
     },
 
@@ -23,7 +24,7 @@ export default StyleSheet.create({
     },
 
     title: {
-        fontSize: 52,
+        fontSize: 48,
         fontFamily: 'IM Fell Double Pica',
     },
 
@@ -43,21 +44,21 @@ export default StyleSheet.create({
         borderRadius: 12,
         textAlign: 'center',
         fontStyle: 'italic',
-        fontSize: 22,
+        fontSize: 19,
         marginBottom: 70,
     },
 
     sendButton: {
         alignItems: 'center',
-        width: '50%',
-        height: '8%',
+        width: 140,
+        height: 50,
         backgroundColor: '#F4AA8A',
         borderRadius: 10,
     },
 
     sendText: {
         paddingTop: 10,
-        fontSize: 22,
+        fontSize: 18,
         fontFamily: 'ABeeZee',
     },
 });

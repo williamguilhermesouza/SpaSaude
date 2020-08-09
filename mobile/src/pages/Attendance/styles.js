@@ -17,8 +17,8 @@ export default StyleSheet.create({
         marginTop: 70,
         alignSelf: 'center',
         alignItems: 'center',
-        width: '50%',
-        height: '8%',
+        width: 140,
+        height: 50,
         backgroundColor: '#F4AA8A',
         borderRadius: 10,
 
@@ -26,7 +26,7 @@ export default StyleSheet.create({
 
     nextText: {
         paddingTop: 10,
-        fontSize: 22,
+        fontSize: 18,
         fontFamily: 'ABeeZee',
     },
 });

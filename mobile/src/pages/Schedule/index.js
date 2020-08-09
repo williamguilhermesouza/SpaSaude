@@ -80,7 +80,7 @@ export default function Schedule() {
                 <Text style={styles.paymentLabel}>Forma de Pagamento</Text>
                 <SegmentedControl  
                     selectedIndex={payment}
-                    backgroundColor='pink'
+                    backgroundColor='#F4AA8A'
                     values={['Dinheiro', 'Débito', 'Crédito']}
                     onChange={ (event) => { setPayment(event.nativeEvent.selectedSegmentIndex); }}
                 />
