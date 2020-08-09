@@ -70,7 +70,7 @@ export default function Login() {
                 style={styles.firstTime}
                 onPress={navigateToFirst}
             >
-                <Text style={styles.fPassText}>Primeira Vez</Text>
+                <Text style={styles.fPassText}>Cadastrar</Text>
             </TouchableOpacity>
 
 

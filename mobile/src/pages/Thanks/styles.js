@@ -9,6 +9,8 @@ export default StyleSheet.create({
 
     thanksLabel: {
         marginTop: '45%',
+        width: '80%',
+        textAlign: 'center',
         marginBottom: '35%',
         fontFamily: 'ABeeZee',
         fontSize: 28,

@@ -38,8 +38,8 @@ export default StyleSheet.create({
         position: 'absolute',
         bottom: 80,
         alignItems: 'center',
-        width: '60%',
-        height: 50,
+        width: '50%',
+        height: '8%',
         backgroundColor: '#F4AA8A',
         borderRadius: 10,
 
@@ -47,7 +47,7 @@ export default StyleSheet.create({
 
     confirmText: {
         paddingTop: 10,
-        fontSize: 26,
+        fontSize: 22,
         fontFamily: 'ABeeZee',
     },
 });
