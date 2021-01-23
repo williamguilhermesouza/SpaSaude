@@ -3,6 +3,8 @@
 ![Repo-size](https://img.shields.io/github/repo-size/williamguilhermesouza/SpaSaude)
 ![Last-commit](https://img.shields.io/github/last-commit/williamguilhermesouza/SpaSaude)
 
+The current app version can be found in google play following [this](https://play.google.com/store/apps/details?id=com.spasaude.spasaude) link.
+
 # Spa&Saude Mobile Care App
 
 <p align="center">
